@@ -2,19 +2,27 @@
 
 A feedback analysis system that automatically processes user feedback, groups similar issues together, and sends you a prioritized daily digest. Critical issues get sent immediately via Telegram.
 
-## How to Use This (For Your Team)
+## Live Deployment
 
-Once deployed, you'll get a URL like: `https://your-worker.workers.dev`
+**Main URL:** https://cf-feedback-agent.udupanavya19.workers.dev
+
+**Key Endpoints:**
+- **Web View (Digest):** https://cf-feedback-agent.udupanavya19.workers.dev/view
+- **JSON API:** https://cf-feedback-agent.udupanavya19.workers.dev/digest
+- **Seed Data:** `POST https://cf-feedback-agent.udupanavya19.workers.dev/seed`
+- **Run Digest:** `POST https://cf-feedback-agent.udupanavya19.workers.dev/run`
+
+## How to Use This (For Your Team)
 
 ### View the Latest Digest
 
 **Option 1: Web Browser (Easiest)**
-- Just open: `https://your-worker.workers.dev/view`
+- Just open: https://cf-feedback-agent.udupanavya19.workers.dev/view
 - Shows the same digest that gets sent to Telegram
 - Refresh the page to see the latest version
 
 **Option 2: JSON API**
-- Open: `https://your-worker.workers.dev/digest`
+- Open: https://cf-feedback-agent.udupanavya19.workers.dev/digest
 - Returns the digest data as JSON (for integrations)
 
 ### Submit New Feedback
@@ -22,7 +30,7 @@ Once deployed, you'll get a URL like: `https://your-worker.workers.dev`
 Send feedback to the system via API:
 
 ```bash
-curl -X POST https://your-worker.workers.dev/feedback \
+curl -X POST https://cf-feedback-agent.udupanavya19.workers.dev/feedback \
   -H "Content-Type: application/json" \
   -d '{
     "content": "App crashes when I try to login",
@@ -52,10 +60,10 @@ To test with sample data:
 
 ```bash
 # Load sample feedback
-curl -X POST https://your-worker.workers.dev/seed
+curl -X POST https://cf-feedback-agent.udupanavya19.workers.dev/seed
 
 # Generate digest immediately (don't wait for 9am)
-curl -X POST https://your-worker.workers.dev/run
+curl -X POST https://cf-feedback-agent.udupanavya19.workers.dev/run
 ```
 
 Then check `/view` to see the results.
