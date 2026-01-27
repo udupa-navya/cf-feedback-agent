@@ -111,7 +111,7 @@ Built on Cloudflare Workers using:
 ### Prerequisites
 - Node.js installed
 - Cloudflare account
-- Telegram bot (for notifications)
+- Telegram bot (for notifications) [or website]
 
 ### Quick Setup
 
