@@ -56,20 +56,21 @@ You'll receive this via:
 
 ### Testing / Demo
 
-To test with sample data:
+To test using the built-in sample feedback data:
 
 ```bash
-# Load sample feedback
+# Load sample feedback (defined in handleSeed)
 curl -X POST https://cf-feedback-agent.udupanavya19.workers.dev/seed
 
-# Generate digest immediately (don't wait for 9am)
+# Generate digest immediately (no need to wait for the scheduled run)
 curl -X POST https://cf-feedback-agent.udupanavya19.workers.dev/run
 
-# view the results on website
-- **Web View (result):** https://cf-feedback-agent.udupanavya19.workers.dev/view
+# View results in the browser
+https://cf-feedback-agent.udupanavya19.workers.dev/view
 ```
 
-Then check `/view` to see the results.
+The `/seed` endpoint loads the predefined mock feedback entries (bugs, feature requests, user-specific issues, and positive feedback).
+Then check `/view` to see the grouped results and digest.
 
 ## What It Does
 
