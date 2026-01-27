@@ -11,7 +11,7 @@ A feedback analysis system that automatically processes user feedback, groups si
 - **JSON API:** https://cf-feedback-agent.udupanavya19.workers.dev/digest
 - **Seed Data:** `POST https://cf-feedback-agent.udupanavya19.workers.dev/seed`
 - **Run Digest:** `POST https://cf-feedback-agent.udupanavya19.workers.dev/run`
-- **View results:** `POST https://cf-feedback-agent.udupanavya19.workers.dev/view`
+- **View results:** `https://cf-feedback-agent.udupanavya19.workers.dev/view`
 
 ## How to Use This (For Your Team)
 
@@ -67,7 +67,7 @@ curl -X POST https://cf-feedback-agent.udupanavya19.workers.dev/seed
 curl -X POST https://cf-feedback-agent.udupanavya19.workers.dev/run
 
 # view the results on website
-curl -X POST https://cf-feedback-agent.udupanavya19.workers.dev/view
+https://cf-feedback-agent.udupanavya19.workers.dev/view
 ```
 
 Then check `/view` to see the results.
